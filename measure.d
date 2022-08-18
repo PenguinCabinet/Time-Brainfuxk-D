@@ -19,9 +19,11 @@ void measure_time(string v1,string v2){
 }
 
 void main(){
-    measure_time("dmd Brainfuxk-D/source/app","app Brainfuxk-D/test/Correct-Cases/mandelbrot.bf");
-    measure_time("dmd -O -release -inline Brainfuxk-D/source/app","app Brainfuxk-D/test/Correct-Cases/mandelbrot.bf");
-    measure_time("ldc2 Brainfuxk-D/source/app","app Brainfuxk-D/test/Correct-Cases/mandelbrot.bf");
-    measure_time("ldc2 -O3 Brainfuxk-D/source/app","app Brainfuxk-D/test/Correct-Cases/mandelbrot.bf");
+    measure_time("dmd Brainfuxk-D/source/app.d","app Brainfuxk-D/test/Correct-Cases/mandelbrot.bf");
+    measure_time("dmd -O -release -inline Brainfuxk-D/source/app.d","app Brainfuxk-D/test/Correct-Cases/mandelbrot.bf");
+    measure_time("ldc2 Brainfuxk-D/source/app.d","app Brainfuxk-D/test/Correct-Cases/mandelbrot.bf");
+    measure_time("ldc2 -O3 Brainfuxk-D/source/app.d","app Brainfuxk-D/test/Correct-Cases/mandelbrot.bf");
+    measure_time("x86_64-unknown-linux-gnu-gdc Brainfuxk-D/source/app.d","app Brainfuxk-D/test/Correct-Cases/mandelbrot.bf");
+    measure_time("x86_64-unknown-linux-gnu-gdc -O3 Brainfuxk-D/source/app.d","app Brainfuxk-D/test/Correct-Cases/mandelbrot.bf");
 
 }
